@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rainwater Harvesting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+/* Responsive styles to keep design intact but adaptive */
+@media (max-width: 900px) {
+  .section-wrapper {
+    margin: 20px 20px 15px;
+    padding: 25px 30px;
+    border-width: 3px;
+  }
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  .info h2 {
+    font-size: 2rem;
+  }
+  .info p {
+    font-size: 1.1rem;
+  }
+  nav ul {
+    gap: 20px;
+  }
+  nav ul li a {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 580px) {
+  header h1 {
+    font-size: 1.7rem;
+  }
+  .section-wrapper {
+    margin: 15px 15px 12px;
+    padding: 20px 15px;
+    border-width: 2px;
+  }
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+  .info h2 {
+    font-size: 1.5rem;
+  }
+  .info p {
+    font-size: 1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  nav ul li a {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+  .back-home-button {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+}
+
+    body {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+        url('back3.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #15283b; /* Dark navy text */
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: transparent;
+      padding: 28px 30px 18px;
+      text-align: center;
+      color: #15283b;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 9px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 32px;
+      padding-left: 0;
+    }
+    nav ul li a {
+      background: rgba(255, 255, 255, 0.75);
+      color: #15283b;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.7rem;
+      padding: 7px 15px;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(21, 40, 59, 0.2);
+      display: inline-block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #15283b;
+      color: #f0f0f0;
+    }
+
+    /* Wrapper for Hero and Info sections with thick borders */
+    .section-wrapper {
+      max-width: 900px;
+      margin: 30px auto 20px;
+      padding: 30px 40px;
+      border: 4px solid #15283b;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.15); /* subtle translucent background for depth */
+      box-shadow: 0 10px 25px rgba(21, 40, 59, 0.5);
+      color: #15283b;
+      text-shadow: none;
+    }
+
+    /* Specific adjustments */
+    .hero {
+      padding: 10px 0 0;
+      margin: 0;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 4px rgba(255,255,255,0.9);
+    }
+    .hero p {
+      font-size: 1.4rem;
+      font-weight: 700;
+      max-width: 700px;
+      margin: 0 auto 15px;
+      letter-spacing: 0.03em;
+      text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
+    }
+
+    .info h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: #101f30;
+      text-shadow: 1px 1px 4px rgba(255,255,255,0.8);
+    }
+    .info p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.7;
+      color: #131f32;
+      text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
+    }
+.back-home-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #0d1b45, #1b2a6b);
+  color: white;
+  padding: 12px 26px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(27,42,107,0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+.back-home-button:hover,
+.back-home-button:focus {
+  background: linear-gradient(135deg, #1b2a6b, #374a9e);
+  box-shadow: 0 10px 20px rgba(55,74,158,0.8);
+  outline: none;
+}
+    footer {
+      background: rgba(21, 40, 59, 0.9);
+      color: #e6eaf0;
+      text-align: center;
+      padding: 15px 20px;
+      font-weight: 600;
+      letter-spacing: 0.6px;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .section-wrapper {
+        margin: 25px 15px 15px;
+        padding: 25px 30px;
+        border-width: 5px;
+      }
+      .hero h2 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1.2rem;
+      }
+      .info h2 {
+        font-size: 2rem;
+      }
+      .info p {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 580px) {
+      header h1 {
+        font-size: 1.7rem;
+      }
+      .section-wrapper {
+        margin: 15px 10px 10px;
+        padding: 20px 15px;
+        border-width: 4px;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .info h2 {
+        font-size: 1.5rem;
+      }
+      .info p {
+        font-size: 1rem;
+      }
+      nav ul {
+        gap: 12px;
+      }
+      nav ul li a {
+        font-size: 0.95rem;
+        padding: 5px 10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rainwater Harvesting</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="types.html">Types</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="how.html">How It Works</a></li>
+        <li><a href="installation.html" tabindex="-1">Installation Guide</a></li>
+      <li><a href="farmers.html"tabindex="-1">Importance for farmers</a></li>
+      <li><a href="india.html">Effeciency in india</a></li>
+      <li><a href="casestudy.html">Case study</a></li>
+      <li><a href="government policies.html">Government policies</a></li>
+      <li><a href="conclusion.html">Conclusion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero section wrapped -->
+  <div class="section-wrapper hero-wrapper">
+    <section class="hero">
+      <h2>Save Water, Save Life</h2>
+      <p>
+        Discover effective ways to harvest rainwater—helping to conserve this vital resource and promote a more sustainable future for all.
+      </p>
+    </section>
+  </div>
+
+  <!-- Info section wrapped -->
+  <div class="section-wrapper info-wrapper">
+    <section class="info">
+      <h2>What is Rainwater Harvesting?</h2>
+      <p>
+        Rainwater harvesting means collecting and storing rainwater for use at home or outdoors, instead of letting it drain away. It's an eco-friendly practice that eases pressure on traditional water supplies, supports groundwater recharge, and helps reduce flooding. This method protects the environment and encourages wise water use in every community.
+      </p>
+    </section>
+  </div>
+<a href="index.html" class="back-home-button">Back to Home</a>
+
+  <footer>
+    <p>© 2025 Rainwater Harvesting Project | Designed by Your Name</p>
+  </footer>
+</body>
+</html>
+\

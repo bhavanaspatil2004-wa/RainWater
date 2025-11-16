@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Benefits of Rainwater Harvesting</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background:
+      linear-gradient(rgba(16,40,68,0.6), rgba(16,40,68,0.7)),
+      url('back5.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #222; /* dark charcoal */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Medium devices — tablets, 960px and below */
+@media (max-width: 960px) {
+  section.hero {
+    padding: 60px 30px 50px;
+    border-radius: 20px;
+  }
+  header h1 {
+    font-size: 2.6rem;
+  }
+  section.hero h2 {
+    font-size: 2.6rem;
+    margin-bottom: 14px;
+  }
+  section.hero p {
+    font-size: 1.25rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.benefit-detail {
+    padding: 35px 28px 38px;
+  }
+  section.benefit-detail img {
+    width: 100%;
+    margin-bottom: 28px;
+  }
+}
+
+/* Small devices — smartphones, 480px and below */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  section.hero h2 {
+    font-size: 2rem;
+  }
+  section.hero p {
+    font-size: 1.1rem;
+  }
+  section.benefits-grid a.benefit-box h3 {
+    font-size: 1.5rem;
+  }
+  section.benefits-grid a.benefit-box p {
+    font-size: 1rem;
+  }
+  section.benefit-detail h3 {
+    font-size: 2rem;
+  }
+  section.benefit-detail p {
+    font-size: 1.1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  nav ul li a {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+  .back-home-button {
+    font-size: 1rem;
+    padding: 10px 18px;
+    margin: 20px auto;
+    display: block;
+    max-width: fit-content;
+  }
+}
+
+  header {
+      background: transparent;
+      padding: 28px 30px 18px;
+      text-align: center;
+      color: #15283b;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 9px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 32px;
+      padding-left: 0;
+    }
+    nav ul li a {
+      background: rgba(255, 255, 255, 0.75);
+      color: #15283b;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.7rem;
+      padding: 7px 15px;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(21, 40, 59, 0.2);
+      display: inline-block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #15283b;
+      color: #f0f0f0;
+    }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255 255 255 / 0.85);
+    border-radius: 20px;
+    padding: 40px 50px;
+    box-shadow: 0 12px 48px rgba(0,0,0,0.15);
+  }
+  h1 {
+    font-weight: 900;
+    font-size: 3rem;
+    margin-bottom: 27px;
+    color:#222;}
+  h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+  section.hero {
+    max-width: 960px;
+    margin: 0 auto 60px;
+    background: rgba(55, 65, 81, 0.7); /* slate blue transparent */
+    border-radius: 28px;
+    padding: 80px 50px 60px;
+    text-align: center;
+    box-shadow: 0 18px 60px rgba(55,65,81,0.75);
+    color: #dce8ff;
+  }
+  section.hero h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+  }
+  section.hero p {
+    font-size: 1.45rem;
+    max-width: 720px;
+    margin: 0 auto;
+    font-weight: 600;
+  }
+  section.benefits-grid {
+    max-width: 1100px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 38px 32px;
+  }
+  .back-home-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #0d1b45, #1b2a6b);
+  color: white;
+  padding: 12px 26px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(27,42,107,0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+.back-home-button:hover,
+.back-home-button:focus {
+  background: linear-gradient(135deg, #1b2a6b, #374a9e);
+  box-shadow: 0 10px 20px rgba(55,74,158,0.8);
+  outline: none;
+}
+  section.benefits-grid a.benefit-box {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255 255 255 / 0.15);
+    color: #222;
+    border-radius: 28px;
+    padding: 26px 22px 32px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.22rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    user-select: none;
+  }
+  section.benefits-grid a.benefit-box h3 {
+    margin-bottom: 18px;
+    font-size: 1.95rem;
+    color: #343f7a; /* dark blue-indigo */
+  }
+  section.benefits-grid a.benefit-box p {
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  section.benefits-grid a.benefit-box:hover,
+  section.benefits-grid a.benefit-box.active {
+    background-color: #6366f1; /* indigo */
+    color: #f0f4ff;
+    box-shadow: 0 14px 48px #6366f180;
+  }
+  section.benefit-detail {
+    max-width: 900px;
+    margin: 0 auto 70px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 28px;
+    padding: 56px 50px 65px;
+    box-shadow: 0 12px 48px rgba(55, 65, 81, 0.1);
+    color: #1f2937;
+    scroll-margin-top: 120px;
+  }
+  section.benefit-detail h3 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    color: #1f2937;
+    margin-bottom: 44px;
+  }
+  section.benefit-detail img {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 18px 52px rgba(55, 65, 81, 0.3);
+    display: block;
+    margin-bottom: 38px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section.benefit-detail p {
+    font-size: 1.28rem;
+    font-weight: 600;
+    line-height: 1.75;
+    margin-bottom: 22px;
+  }
+  @media (max-width: 960px) {
+    section.hero {
+      padding: 60px 30px 50px;
+      border-radius: 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+    }
+    section.hero h2 {
+      font-size: 2.6rem;
+      margin-bottom: 14px;
+    }
+    section.hero p {
+      font-size: 1.25rem;
+      max-width: 90%;
+    }
+    section.benefit-detail {
+      padding: 35px 28px 38px;
+    }
+    section.benefit-detail img {
+      width: 100%;
+      margin-bottom: 28px;
+    }
+  }
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    section.hero h2 {
+      font-size: 2rem;
+    }
+    section.hero p {
+      font-size: 1.15rem;
+    }
+    section.benefits-grid a.benefit-box h3 {
+      font-size: 1.5rem;
+    }
+    section.benefits-grid a.benefit-box p {
+      font-size: 1rem;
+    }
+    section.benefit-detail h3 {
+      font-size: 2rem;
+    }
+    section.benefit-detail p {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Rainwater Harvesting</h1>
+  <nav class="main-nav" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html" tabindex="-1">Home</a></li>
+      <li><a href="types.html" tabindex="-1">Types</a></li>
+      <li><a href="benefits.html" class="active" aria-current="page" tabindex="-1">Benefits</a></li>
+      <li><a href="how.html" tabindex="-1">How It Works</a></li>
+      <li><a href="installation.html" tabindex="-1">Installation Guide</a></li>
+      <li><a href="farmers.html"tabindex="-1">Importance for farmers</a></li>
+      <li><a href="india.html">Effeciency in india</a></li>
+      <li><a href="casestudy.html">Case study</a></li>
+      <li><a href="government policies.html">Government policies</a></li>
+      <li><a href="conclusion.html">Conclusion</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" aria-label="Page Introduction">
+  <h2>The Vital Benefits of Rainwater Harvesting</h2>
+  <p>Explore how rainwater harvesting saves water, prevents flooding, recharges groundwater, and supports a sustainable environment.</p>
+</section>
+
+<section class="benefits-grid" aria-label="Benefits Overview Grid">
+  <a href="#detail1" class="benefit-box active" data-target="detail1" tabindex="0">
+    <h3>Save Water, Save Life</h3>
+    <p>Collect and conserve rainwater to protect water resources for current and future generations.  </p>
+  </a>
+  <a href="#detail2" class="benefit-box" data-target="detail2" tabindex="0">
+    <h3>Flood Control</h3>
+    <p>Reduce flooding risk by managing rainwater runoff effectively.</p>
+  </a>
+  <a href="#detail3" class="benefit-box" data-target="detail3" tabindex="0">
+    <h3>Recharge Groundwater</h3>
+    <p>Support aquifer replenishment for sustainable water availability.</p>
+  </a>
+  <a href="#detail4" class="benefit-box" data-target="detail4" tabindex="0">
+    <h3>Energy & Cost Savings</h3>
+    <p>Lower energy usage and costs related to water treatment and distribution.</p>
+  </a>
+  <a href="#detail5" class="benefit-box" data-target="detail5" tabindex="0">
+    <h3>Prevent Soil Erosion</h3>
+    <p>Maintain soil moisture and prevent erosion to improve land productivity.</p>
+  </a>
+  <a href="#detail6" class="benefit-box" data-target="detail6" tabindex="0">
+    <h3>Improve Ecosystems</h3>
+    <p>Promote sustainable ecosystems and increase drought resilience.</p>
+  </a>
+  <a href="#detail7" class="benefit-box" data-target="detail7" tabindex="0">
+    <h3>Improve Water Quality</h3>
+    <p>Utilize filtration and proper design to ensure harvested water safety.</p>
+  </a>
+</section>
+
+<section id="detail1" class="benefit-detail" tabindex="0" aria-label="Details of Save Water, Save Life">
+  <h3>Save Water, Save Life</h3>
+  <img src="conseravtion.jpg" alt="Water Conservation" />
+  <p>Rainwater harvesting is an effective way to conserve water by catching and storing rain for various uses, reducing thirst on groundwater supplies and defusing water scarcity.Rainwater harvesting saves water by collecting and storing rainwater for later use, which can reduce reliance on municipal water supplies and help with water scarcity. It involves using a catchment area, like a rooftop, to gather rain that is then channeled to a storage system, or used to recharge groundwater. This harvested water can be used for non-potable purposes like irrigation, flushing toilets, or washing clothes and cars.Rainwater harvesting saves water and lives by collecting and storing rain, reducing reliance on groundwater, and mitigating the risks of flooding and drought. By capturing rainwater, we create a local, sustainable water source for needs like irrigation and drinking (after purification), which supports life by ensuring water availability during dry periods and reducing the strain on depleted water supplies. It also prevents storm water runoff, which helps reduce flooding, soil erosion, and water pollution. </p>
+</section>
+
+<section id="detail2" class="benefit-detail" tabindex="0" aria-label="Details of Flood Control">
+  <h3>Flood Control</h3>
+  <img src="flooding.jpg" alt="Flood Control" />
+  <p>Capture rainwater runoff to reduce flooding risks in urban and rural areas, protecting soil, infrastructure, and people.Rainwater harvesting helps control floods by capturing and storing rainwater, which reduces the volume of surface runoff that can overwhelm drainage systems. Techniques include storing water in tanks, using "smart tanks" that release water ahead of storms based on forecasts, and implementing green infrastructure like check dams and bioswales to slow water flow and promote infiltration. These methods prevent or reduce flooding, minimize damage to property and infrastructure, and can also provide a water resource. Rainwater harvesting systems: Storing water from rooftops in underground tanks with controlled release valves to manage peak flows.
+Smart tanks: Using rainfall forecasts to proactively empty tanks before heavy rain, allowing them to capture more water and reduce flood risk.
+Check dams: Small barriers built across streams or gullies to slow down the flow of water and allow it to seep into the ground.
+Bioswales and filter trenches: Vegetated channels that collect and filter stormwater, slowing its flow and improving its absorption into the soil.
+Percolation tanks: Ponds or depressions that collect and hold large volumes of water, allowing it to gradually seep into the ground.
+Floodwater harvesting: Diverting floodwaters from a larger catchment area, such as a mountainous area, into bunded basins for storage and soil enrichment. </p>
+</section>
+
+<section id="detail3" class="benefit-detail" tabindex="0" aria-label="Details of Recharge Groundwater">
+  <h3>Recharge Groundwater</h3>
+  <img src="ground.jpg" alt="Groundwater Recharge" />
+  <p>Using rainwater harvesting to increase groundwater levels enables sustainable water availability for irrigation and domestic needs.Rainwater harvesting is a method for groundwater recharge that collects and directs rainwater into the ground to replenish aquifers. This process, also called artificial recharge, can be done using structures like recharge pits, trenches, and wells to capture runoff from roofs and other surfaces, allowing it to slowly filter into the soil. This helps to mitigate flooding, reduce water scarcity, and improve the longevity of existing wells. Groundwater can be recharged through natural processes like rain and infiltration, or through artificial methods like building percolation tanks, check dams, and recharge wells. A key method is using a recharge well, where rainwater collected from roofs is filtered and directed deep into the ground to replenish aquifers. 
+</p>
+</section>
+
+<section id="detail4" class="benefit-detail" tabindex="0" aria-label="Details of Energy & Cost Savings">
+  <h3>Energy & Cost Savings</h3>
+  <img src="energy.jpg" alt="Energy Savings" />
+  <p>Reducing reliance on pumped mains water helps save energy and cuts costs, supporting environmentally-friendly living.Improves groundwater table thereby saving energy to lift water: Rainwater harvesting systems recharge run-off surface water to the underground aquifer to increase the water level and its quality. This has resulted in creating a sustainable groundwater table even when there is less rainfall.Rainwater harvesting saves energy and costs by reducing reliance on treated municipal water, which requires significant energy for pumping and treatment. This leads to lower water and energy bills, especially in areas with high water rates, and can result in substantial savings of 40% to 50% on water bills. While initial setup costs exist, these are offset by long-term savings and the potential for government incentives. </p>
+</section>
+
+<section id="detail5" class="benefit-detail" tabindex="0" aria-label="Details of Prevent Soil Erosion">
+  <h3>Prevent Soil Erosion</h3>
+  <img src="soil.jpg" alt="Soil Erosion Prevention" />
+  <p>Maintaining moisture levels and managing runoff keeps soil fertile and productive, reducing erosion issues.To prevent soil erosion in rainwater harvesting, use techniques like planting vegetative cover, contour farming, and building structures such as check dams and bunds. These methods slow down runoff, reduce the water's erosive power, and allow more water to infiltrate the soil.To avoid soil erosion and save water, if the majority of the rain falls in one or two spells in arid regions, the majority of the rain is never saved for later use and is instead wasted. In addition to having little rain, dry areas also experience "natural leakage," in which 90% of the rain is lost either directly or indirectly and is not available for domestic or agricultural use. Many countries are on the verge of a historic water shortage. Rain Water Harvesting (RWH) entails using techniques that enhance the quantity of water stored in the soil profile by capturing or retaining the rain where it falls. It also involves capturing small amounts of precipitation as surface runoff.
+
+ </p>
+</section>
+
+<section id="detail6" class="benefit-detail" tabindex="0" aria-label="Details of Improve Ecosystems">
+  <h3>Improve Ecosystems</h3>
+  <img src="land.jpg" alt="Improve Ecosystems" />
+  <p>Enhance biodiversity and landscape health with cleaner water sources and steady moisture availability.To improve ecosystems with rainwater harvesting, incorporate it with sustainable landscaping practices like rain gardens and permeable paving to reduce runoff and recharge groundwater. Implementing groundwater recharge systems such as infiltration pits, trenches, or percolation tanks directly benefits soil and local aquifers. Additionally, using harvested water for irrigation reduces the need for potable water and supports healthy plant life, while proper system maintenance prevents issues like mosquito breeding and ensures water quality. Create shallow depressions planted with native vegetation to capture and filter runoff, reducing erosion and increasing groundwater infiltration.</p>
+</section>
+
+<section id="detail7" class="benefit-detail" tabindex="0" aria-label="Details of Improve Water Quality">
+  <h3>Improve Water Quality</h3>
+  <img src="opentype.jpg" alt="Improve Water Quality" />
+  <p>Appropriate system design combined with filtration ensures high-quality rainwater suitable for many uses.To improve rainwater harvesting water quality, implement a multi-step approach including pre-tank filtration with first flush diverters and leaf guards, regular maintenance like cleaning gutters, and post-tank treatment like activated carbon filters, UV sterilization, or chlorination. The specific methods depend on the intended use of the water, with drinking water requiring more thorough treatment and testing. Rainwater harvesting helps manage storm water runoff to prevent erosion, flooding, and poor water quality in our lakes and streams. ... Rainwater systems counteract storm water run off and thereby reduce flooding, erosion, and ground water contamination.</p>
+</section>
+<a href="index.html" class="back-home-button">Back to Home</a>
+
+<script>
+  const boxes = document.querySelectorAll('.benefit-box');
+  const details = document.querySelectorAll('.benefit-detail');
+
+  boxes.forEach(box => {
+    box.addEventListener('click', e => {
+      e.preventDefault();
+      boxes.forEach(b => b.classList.remove('active'));
+      box.classList.add('active');
+      const targetId = box.getAttribute('data-target');
+      document.getElementById(targetId).scrollIntoView({behavior: 'smooth', block: 'start'});
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    let scrollPos = window.scrollY + window.innerHeight/3;
+    for (let i = 0; i < details.length; i++) {
+      if (scrollPos >= details[i].offsetTop) {
+        boxes.forEach(b => b.classList.remove('active'));
+        if(boxes[i]) boxes[i].classList.add('active');
+      }
+    }
+  });
+</script>
+</body>
+</html>

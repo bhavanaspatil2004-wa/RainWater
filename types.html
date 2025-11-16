@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Types of Rainwater Harvesting</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    background:
+      linear-gradient(rgba(20, 30, 50, 0.25), rgba(20, 30, 50, 0.25)),
+      url('back1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #2d2f45;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @media (max-width: 1120px) {
+  main {
+    flex-direction: column;
+    gap: 36px;
+    padding-bottom: 65px;
+  }
+  #typesBox, #contentBox {
+    max-width: 100%;
+    flex: none;
+  }
+  .harvest-img {
+    max-width: 90%;
+    border-width: 3px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+  }
+  nav ul li a {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+  #typesBox {
+    padding: 25px 20px;
+  }
+  #contentBox {
+    padding: 25px 20px;
+  }
+  #contentBox h3 {
+    font-size: 2rem;
+  }
+  ol.types-list li {
+    font-size: 1.3rem;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  header h1 {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+  #contentBox h3 {
+    font-size: 1.7rem;
+  }
+  ol.types-list {
+    font-size: 1.15rem;
+  }
+  ol.types-list li {
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+}
+
+ header {
+      background: transparent;
+      padding: 28px 30px 18px;
+      text-align: center;
+      color: #15283b;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 9px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 32px;
+      padding-left: 0;
+    }
+    nav ul li a {
+      background: rgba(255, 255, 255, 0.75);
+      color: #15283b;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.7rem;
+      padding: 7px 15px;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(21, 40, 59, 0.2);
+      display: inline-block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #15283b;
+      color: #f0f0f0;
+    }
+
+.back-home-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #0d1c4e, #243e8a);
+  color: #f0f4ff;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(36,62,139,0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  margin: 20px 0;
+}
+.back-home-button:hover,
+.back-home-button:focus {
+  background: linear-gradient(135deg, #243e8a, #0d1c4e);
+  box-shadow: 0 8px 20px rgba(36,62,139,0.8);
+  outline: none;
+}
+  main {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    display: flex;
+    gap: 54px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #typesBox {
+    flex: 1 1 380px;
+    background: rgba(255 255 255 / 0.20);
+    border-radius: 18px;
+    padding: 30px 25px;
+    box-shadow: 0 6px 20px rgba(45,47,69,0.25);
+  }
+  #typesBox h2 {
+    font-size: 2.7rem;
+    margin-bottom: 42px;
+    color: #2d2f45;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 0 1px 4px rgba(255 255 255 / 0.7);
+  }
+  ol.types-list {
+    list-style: decimal inside;
+    font-size: 1.5rem;
+    color: #2c2e44;
+    font-weight: 800;
+  }
+  ol.types-list li {
+    padding: 18px 22px;
+    margin-bottom: 18px;
+    border-left: 10px solid transparent;
+    border-radius: 14px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.3s ease;
+  }
+  ol.types-list li:hover,
+  ol.types-list li.active {
+    background-color: rgba(161, 172, 208, 0.4);
+    border-left-color: #4a5cc1;
+    color: #222441;
+    box-shadow: inset 0 0 12px 3px rgba(74, 92, 193, 0.5);
+    font-size: 1.53rem;
+  }
+  #contentBox {
+    flex: 2 1 720px;
+    padding: 35px 40px;
+    background: rgba(255 255 255 / 0.18);
+    border-radius: 26px;
+    box-shadow: 0 12px 40px rgba(74, 92, 193, 0.3);
+    color: #2b2e48;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  #contentBox h3 {
+    font-size: 2.7rem;
+    font-weight: 900;
+    margin-bottom: 32px;
+    text-align: center;
+    color: #3e43aa;
+    text-shadow: 0 1px 7px rgba(255 255 255 / 0.7);
+  }
+  .harvest-img {
+    max-width: 320px;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    box-shadow: 0 14px 42px rgba(74, 92, 193, 0.45);
+    display: block;
+    margin: 0 auto 20px;
+    border: 5px solid #9ca9db;
+  }
+  .info-paragraph {
+    font-size: 1.38rem;
+    font-weight: 600;
+    line-height: 1.9;
+    max-width: 900px;
+    align-self: center;
+    text-align: justify;
+    color: #2a2e47;
+    text-shadow: 0 0 4px rgba(255 255 255, 0.75);
+  }
+  footer {
+    background-color: #4a5cc1;
+    color: #d7dbf4;
+    font-weight: 700;
+    text-align: center;
+    padding: 24px 15px;
+    letter-spacing: 0.8px;
+    box-shadow: 0 -8px 18px rgba(0, 0, 0, 0.25);
+  }
+  @media (max-width: 1120px) {
+    main {
+      flex-direction: column;
+      gap: 36px;
+      padding-bottom: 65px;
+    }
+    #typesBox, #contentBox {
+      max-width: 100%;
+    }
+    .harvest-img {
+      max-width: 90%;
+      border-width: 3px;
+      margin-bottom: 15px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Rain water Harvesting</h1>
+  <nav class="main-nav" aria-label="Main Navigation">
+    <ul>
+      <li><a href="index.html" tabindex="-1">Home</a></li>
+      <li><a href="types.html" tabindex="-1">Types</a></li>
+      <li><a href="benefits.html" class="active" aria-current="page" tabindex="-1">Benefits</a></li>
+      <li><a href="how.html" tabindex="-1">How It Works</a></li>
+      <li><a href="installation.html" tabindex="-1">Installation Guide</a></li>
+      <li><a href="farmers.html"tabindex="-1">Importance for farmers</a></li>
+      <li><a href="india.html">Effeciency in india</a></li>
+      <li><a href="casestudy.html">Case study</a></li>
+      <li><a href="government policies.html">Government policies</a></li>
+      <li><a href="conclusion.html">Conclusion</a></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <div id="typesBox" aria-label="Rainwater harvesting types">
+    <h2>Types of Rainwater Harvesting</h2>
+    <ol class="types-list" role="listbox" tabindex="0">
+      <li tabindex="0" role="option" aria-selected="true" data-id="1" class="active">Rooftop Rainwater Harvesting</li>
+      <li tabindex="0" role="option" aria-selected="false" data-id="2">Surface Runoff Harvesting</li>
+      <li tabindex="0" role="option" aria-selected="false" data-id="3">Check Dams</li>
+      <li tabindex="0" role="option" aria-selected="false" data-id="4">Percolation Pits</li>
+      <li tabindex="0" role="option" aria-selected="false" data-id="5">Recharge Wells</li>
+      <li tabindex="0" role="option" aria-selected="false" data-id="6">Other Innovative Types</li>
+    </ol>
+  </div>
+  <div id="contentBox" tabindex="0" aria-live="polite" aria-atomic="true">
+    <!-- Content will be dynamically inserted here -->
+  </div>
+</main>
+<a href="index.html" class="back-home-button">Back to Home</a>
+
+<footer>
+  <p>© 2025 Rainwater Harvesting Project | Designed by Your Name</p>
+</footer>
+
+<script>
+  const typesList = document.querySelectorAll('#typesBox li');
+  const contentBox = document.getElementById('contentBox');
+
+  const contentData = {
+    1: {
+      title: "Rooftop Rainwater Harvesting",
+      images: ["rooftop.jpg"],
+      texts: [
+        `The key components include:
+- Catchment: area of collection.
+- Gutters & Downspouts: channels roof water.
+- First-Flush Diverter: discards initial runoff.
+- Filters: remove debris.
+- Storage tanks: water storage.Rooftop rainwater harvesting is the practice of collecting rainwater and using the water for various other purposes. This involves the collection of the rainwater that falls on the roof area of the buildings, which is then diverted to a rainwater filter through a downspout pipe. The filtered water is then stored in a sump or other water storage tank. It is also possible to recharge groundwater using this method. 71 % of Earth is covered in water and only a small amount of it is fresh water, unfortunately most of the fresh water is not easy to obtain. This leads to a scarcity of fresh water. By conserving rainwater, we can reduce our water bills, which is economically beneficial. RWH also helps us overcome climate change by reducing our carbon and water footprints. By collecting the rainwater during the wet seasons, we can utilize the collected rainwater during the drought periods.`
+      ],
+    },
+    2: {
+      title: "Surface Runoff Harvesting",
+      images: ["surface.jpg"],
+      texts: [
+        "Surface runoff harvesting collects rainwater flowing on land into reservoirs or recharge pits.Surface runoff harvesting is the practice of collecting rainwater that flows over land and storing it for later use. This method involves capturing water from surfaces like roads, fields, and open land, and channeling it into storage structures such as ponds, reservoirs, or tanks, or using it to recharge groundwater through methods like check dams or recharge pits. It is a key technique for water conservation, especially in urban areas with impermeable surfaces, and can be used for irrigation, domestic needs, and replenishing groundwater. "
+      ],
+      extraImage: {
+        src: "industrial.jpg",
+        alt: "Industrial Stormwater Runoff",
+        text: `Industrial runoff may be polluted; BMPs and treatment mitigate this.Industrial runoff harvesting is the practice of collecting, storing, and utilizing rainwater from industrial properties to conserve water. This involves capturing runoff from rooftops and paved areas and channeling it into storage tanks for various uses, such as toilet flushing, cooling towers, and irrigation. It can also involve using the collected water for groundwater recharge, helping to reduce dependency on groundwater resources. `
+      }
+    },
+    3: {
+      title: "Check Dams",
+      images: ["steelcheck.jpg", "opentype.jpg"],
+      texts: [
+        "Check dams slow water flow, reduce erosion.Check dams are small barriers built across streams and gullies to slow down water flow during heavy rains, which is a core technique for rainwater harvesting (RWH). By slowing the water, they cause it to pool and seep into the ground, recharging groundwater levels. This also reduces soil erosion, traps silt for soil enrichment, and can create water storage for irrigation during dry seasons. ",
+        "Open-type dams allow water and sediment flow and are modifiable.check dams are a specific design, often using steel pipes or other spaced structural elements, to manage large sediment loads (like debris flows) while allowing water and finer material to pass through. The user's query rwh steelcheck nd opentype seems to refer to a specific type of open-style check dam, likely constructed using steel for durability in rainwater harvesting (RWH) and erosion control contexts"
+      ]
+    },
+    4: {
+      title: "Percolation Pits",
+      images: ["pit.jpg"],
+      texts: [
+        `Pits facilitate surface water infiltration to recharge groundwater.Percolation Pit is also like Rainwater Harvesting System A percolation pit, in its most low-tech form, is a simple hole dug into the ground. It facilitates groundwater recharge through infiltration of surface runoff into the soil or rock. Differences to contour trenches: Better water storage capability due to greater depth. Percolation tank is an artificially created surface water body, submerging in its reservoir a highly permeable land so that surface runoff is made to percolate and recharge the ground water storage. The percolation tanks are mostly earthen dams with masonry structure only for spillway. Percolation tank is an artificially created surface water body, submerging in its reservoir a highly permeable land so that surface runoff is made to percolate and recharge the ground water storage. Percolation tank should be constructed preferable on second to third order streams, located on highly fractured and weathered rocks which have lateral continuity down stream. The recharged area down stream should have sufficient number of wells and cultivable land to benefit from the augmented ground water. The size of percolation tank should be governed by percolation capacity of strata in the tank bed. Normally percolation tanks are designed for storage capacity of 0.1 to 0.5 MCM. It is necessary to design the tank to provide a ponded water column generally between 3 & 4.5 m. The percolation tanks are mostly earthen dams with masonry structure only for spillway. The purpose of the percolation tank is to recharge the ground water storage and hence seepage below the seat of the bed is permissible. for dams upto 4.5 m. height, cut off trenches are not necessary and keying and benching between the dam seat and the natural ground is sufficient. Low cost rainwater harvesting System in Vadodara Rainwater Harvesting system in Ahmedabad water Harvesting solution in Ahmedabad. Digital water Flow Meter in Ahmedabad Digital Water Level Recorder in Vadodara Percolation well manufacturer in Ahmedabad. Allegiance Water Management .`
+      ]
+    },
+    5: {
+      title: "Recharge Wells",
+      images: ["recharge.jpg"],
+      texts: [
+        `Wells direct rainwater underground replenishing groundwater with filtration.A recharge well is a system for rainwater harvesting that involves filtering rainwater from a roof or surface runoff and directing it to an existing well or a newly constructed one to replenish groundwater. Key components include a catchment area, a conveyance system, filters, and the recharge well itself, which sends the filtered water into underground aquifers. This process helps to combat water shortages, reduce urban flooding, and improve the quality of groundwater. A recharge well is an artificial construction which is used to supplement groundwater by directing surface water or rainfall into underlying aquifers. Recharging a well is the practice of intentionally diverting harvested rainfall into wells and restoring the aquifers that have been depleted by over-pumping.Recharge wells play a vital role in addressing India’s growing water crisis. As a result of rising urbanisation, irregular patterns of rainfall and heavy exploitation of groundwater, the rate at which the groundwater is exploited has surpassed the rate at which it can naturally be recharged by naturally occurring aquifers. Recharge wells offer a feasible and viable solution, pushing the surface water, particularly rain water, into the ground to replenish underground waters.`
+      ]
+    },
+    6: {
+      title: "Other Innovative Types",
+      images: ["smart.jpg", "blue.jpg", "india.jpg"],
+      texts: [
+        'Smart rainwater harvesting systems bring high-tech efficiency to household water storage. For example, a newly launched setup in Europe combines traditional components (roof gutters, leaf catchers, filters, and an underground tank) with sensors and automated controls. The system monitors weather forecasts, tank levels, and water usage, automatically pumping and distributing stored rainwater for garden irrigation, toilet flushing, or laundry. If the tank runs low, it can even switch to mains water or use a valve to refill from the grid. This IoT-enabled approach ensures no drop of rain is wasted while keeping maintenance simple (just the occasional filter change).The significance of these smart home systems is their efficiency and ease of use for the average homeowner. By optimising collection and use, they reduce dependence on municipal supply and cut water bills. In places like the Czech Republic, such systems are now encouraged or even required in new houses to improve water sustainability. The potential impact is huge: widespread adoption could substantially conserve potable water, making homes more climate-resilient and self-sufficient. In short, smart rainwater harvesters turn homes into active water savers, aligning modern convenience with eco-friendly living.The Slimline Water Tanks from The Water Tank Factory are perfect for homeowners integrating smart water systems. Their space-saving design makes them ideal for urban and suburban properties, while their durable construction ensures long-term reliability. And all our poly tanks have the ability to switch from tank water to a mains water supply if your tank is running low, when paired with our .'
+]
+    }
+  };
+
+  function clearActive() {
+    typesList.forEach(li => {
+      li.classList.remove('active');
+      li.setAttribute('aria-selected', 'false');
+    });
+  }
+
+  function renderContent(id) {
+    const { title, images, texts, extraImage } = contentData[id];
+    contentBox.innerHTML = `<h3>${title}</h3>`;
+    images.forEach((src, idx) => {
+      contentBox.innerHTML += `<img class="harvest-img" src="${src}" alt="${title} Image ${idx+1}"/>`;
+      if (texts[idx]) {
+        contentBox.innerHTML += `<div class="info-paragraph">${texts[idx].replace(/\n/g, "<br>")}</div>`;
+      }
+    });
+    if (extraImage) {
+      contentBox.innerHTML += `<img class="harvest-img" src="${extraImage.src}" alt="${extraImage.alt}"/>
+      <div class="info-paragraph">${extraImage.text.replace(/\n/g, "<br>")}</div>`;
+    }
+  }
+
+  typesList.forEach(item => {
+    item.addEventListener('click', () => {
+      clearActive();
+      item.classList.add('active');
+      item.setAttribute('aria-selected', 'true');
+      renderContent(item.getAttribute('data-id'));
+    });
+  });
+
+  renderContent("1");
+</script>
+</body>
+</html>

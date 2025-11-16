@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Farmer-Friendly Rainwater Harvesting System Layout</title>
+<style>
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+    padding: 20px;
+    color: #222;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.35);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+header {
+      background: transparent;
+      padding: 28px 30px 18px;
+      text-align: center;
+      color: #15283b;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 9px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 32px;
+      padding-left: 0;
+    }
+    nav ul li a {
+      background: rgba(255, 255, 255, 0.75);
+      color: #15283b;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.7rem;
+      padding: 7px 15px;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(21, 40, 59, 0.2);
+      display: inline-block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #15283b;
+      color: #f0f0f0;
+    }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background:rgba(255 255 255 / 0.85); /* teal with slight transparency */
+    border-radius: 30px;
+    padding: 30px;
+    border: 6px solid #222; /* matching teal color */
+    box-shadow: 0 14px 52px rgba(44, 122, 123, 0.4);
+    color: #222; /* lighter text for contrast on teal */
+  }
+@media (max-width: 900px) {
+  .container {
+    margin: 20px 15px;
+    padding: 25px 20px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  p, ul li {
+    font-size: 1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  .back-home-button {
+    font-size: 1rem;
+    padding: 10px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p, ul li {
+    font-size: 0.9rem;
+  }
+  nav ul {
+    gap: 10px;
+  }
+  nav ul li a {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+  .back-home-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+  .diagram img,
+  .diagram p,
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+
+  h1 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #004d4d; /* Darker teal-ish for header */
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #004d4d; 
+    border-bottom: 2px solid #00a39a;
+    padding-bottom: 6px;
+    margin-top: 40px;
+  }
+  p, ul li {
+    color: #222;/* soft cyan/teal text */
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  ul {
+    list-style-type: disc;
+    padding-left: 40px;
+  }
+  ul li {
+    margin-bottom: 14px;
+  }
+
+  .diagram {
+    text-align: center;
+    margin: 30px 0;
+  }
+  .diagram img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(44,122,123,0.4);
+  }
+
+  .back-home-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #004d4d, #007d7d);
+    color: white;
+    padding: 8px 16px;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 6px 14px rgba(0,125,125,0.6);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+    margin: 20px 0 0 0;
+  }
+  .back-home-button:hover,
+  .back-home-button:focus {
+    background: linear-gradient(135deg, #007d7d, #33a5a5);
+    box-shadow: 0 10px 20px rgba(51,165,165,0.8);
+    outline: none;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #004d4d;
+    font-weight: 600;
+  }
+
+  /* Responsive */
+  @media(max-width: 600px) {
+    header {
+      padding: 20px 15px 15px;
+    }
+    nav.main-nav li a {
+      padding: 10px 12px;
+      font-size: 1rem;
+    }
+    .container {
+      margin: 30px 15px;
+      padding: 25px 20px;
+    }
+    h1 {
+      font-size: 2.2rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+    }
+    p, ul li {
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Rainwater Harvesting in India</h1>
+    <nav class="main-nav" aria-label="Main Navigation">
+      <ul>
+        <li><a href="index.html" tabindex="-1">Home</a></li>
+        <li><a href="types.html" tabindex="-1">Types</a></li>
+        <li><a href="benefits.html" class="active" aria-current="page" tabindex="-1">Benefits</a></li>
+        <li><a href="how.html" tabindex="-1">How It Works</a></li>
+        <li><a href="installation.html" tabindex="-1">Installation Guide</a></li>
+        <li><a href="farmers.html" tabindex="-1">Importance for farmers</a></li>
+        <li><a href="india.html" tabindex="-1">Efficiency in India</a></li>
+        <li><a href="casestudy.html">Case study</a></li>
+        <li><a href="government policies.html">Government policies</a></li>
+        <li><a href="conclusion.html">Conclusion</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <h1>Farmer-Friendly Rainwater Harvesting System</h1>
+    <p>This system design ensures effective rainwater capture and sustainable usage for agricultural needs, empowering farmers to manage water efficiently.</p>
+
+    <h2>Key Components:</h2>
+    <ul>
+      <li><strong>Catchment Surface:</strong> Usually rooftops or specially prepared ground areas that collect rainwater.</li>
+      <li><strong>Gutters and Downspouts:</strong> Channels that convey rainfall from the catchment to storage tanks.</li>
+      <li><strong>First Flush Diverter:</strong> A device that discards the initial runoff containing debris and contaminants.</li>
+      <li><strong>Filtration Unit:</strong> Filters that remove leaves, dirt, and other impurities before storage.</li>
+      <li><strong>Storage Tanks:</strong> Durable tanks for storing clean harvested rainwater, sized according to farm needs.</li>
+      <li><strong>Distribution System:</strong> Pipes and hoses distributing stored water to fields for irrigation.</li>
+      <li><strong>Groundwater Recharge Pits:</strong> Optional structures that allow excess water to recharge aquifers.</li>
+      <li><strong>Overflow System:</strong> Safely directs surplus water to drains or recharge areas to avoid flooding.</li>
+    </ul>
+
+    <div class="diagram">
+      <img src="daigram.jpg" alt="Farmer-Friendly Rainwater Harvesting System Layout Diagram" />
+      <p><em>Illustrative diagram showing catchment, filtration, storage, and irrigation layout.</em></p>
+    </div>
+
+    <h2>Benefits for Farmers:</h2>
+    <p>This layout helps farmers by:</p>
+    <img src="farming.jpg"/>
+    <img src="farming1.jpg"width=250px height=230px;/>
+    <img src="farming2.jpg"width=270px height=230px;/>
+    <img src="farming3.jpg"width=250px height=230px;/>
+    <img src="farming4.jpg"width=250px height=230px;/>
+    <img src="farming5.jpg"width=250px height=230px;/>
+    <ul>
+      <li>Ensuring consistent water availability during dry periods.</li>
+      <li>Improving crop yields with sustainable irrigation.</li>
+      <li>Reducing dependency on unpredictable rainfall and groundwater.</li>
+      <li>Lowering irrigation costs and water taxes.</li>
+      <li>Supporting soil health and preventing erosion.</li>
+    </ul>
+    <a href="index.html" class="back-home-button">Back to Home</a>
+  </div>
+  <footer>&copy; 2025 Rainwater Harvesting Project | Designed by Your Name</footer>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Installation Guide - Rainwater Harvesting</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+    body {
+      background: url('back.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      color: #f2f2f0;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+    }
+    @media (max-width: 650px) {
+  main {
+    width: 90%;
+    padding: 25px 20px;
+  }
+  ol li {
+    font-size: 1.1rem;
+  }
+  header h1 {
+    font-size: 2.3rem;
+  }
+  h2 {
+    font-size: 1.95rem;
+  }
+  nav ul li a {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+  }
+  ol li {
+    font-size: 1rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  nav ul li a {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  .back-home-button {
+    font-size: 1rem;
+    padding: 10px 18px;
+    margin: 20px auto;
+    display: block;
+    max-width: fit-content;
+  }
+}
+
+    .back-home-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #0d1b45, #1b2a6b);
+  color: white;
+  padding: 12px 26px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 6px 14px rgba(27,42,107,0.6);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+.back-home-button:hover,
+.back-home-button:focus {
+  background: linear-gradient(135deg, #1b2a6b, #374a9e);
+  box-shadow: 0 10px 20px rgba(55,74,158,0.8);
+  outline: none;
+}
+   header {
+      background: transparent;
+      padding: 28px 30px 18px;
+      text-align: center;
+      color: #15283b;
+      z-index: 10;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 9px;
+      letter-spacing: 2px;
+      font-weight: 800;
+      text-shadow: 1px 1px 2px rgba(255,255,255,0.7);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 32px;
+      padding-left: 0;
+    }
+    nav ul li a {
+      background: rgba(255, 255, 255, 0.75);
+      color: #15283b;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.7rem;
+      padding: 7px 15px;
+      border-radius: 6px;
+      transition: background 0.3s ease, color 0.3s ease;
+      box-shadow: 0 2px 6px rgba(21, 40, 59, 0.2);
+      display: inline-block;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      background: #15283b;
+      color: #f0f0f0;
+    }
+
+    main {
+      background: rgba(47, 62, 70, 0.7); /* transparent soft deep teal */
+      margin: 30px auto 60px;
+      padding: 30px 35px;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.7);
+      font-size: 1.15rem;
+      color: #e6e8e6; /* light stone */
+      line-height: 1.75;
+    }
+    h2 {
+      margin-bottom: 25px;
+      color: #efd2bb; /* soft warm beige */
+      text-align: center;
+      font-weight: 800;
+      font-size: 2.4rem;
+      letter-spacing: 0.6px;
+      text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+    }
+    ol {
+      margin-left: 20px;
+      color: #cbc8bf; /* light warm grey */
+      line-height: 1.9;
+    }
+    ol li {
+      margin-bottom: 18px;
+      font-weight: 600;
+      text-shadow: 0 0 2px rgba(0,0,0,0.3);
+    }
+    ol li strong {
+      color: #f4e3d7; /* pale cream */
+      font-weight: 700;
+    }
+    footer {
+      background: #2f3e46; /* deep slate */
+      color: #cad2c5;
+      text-align: center;
+      padding: 18px 22px;
+      font-weight: 600;
+      box-shadow: 0 -3px 8px rgba(0,0,0,0.7);
+      letter-spacing: 0.7px;
+      user-select: none;
+    }
+    @media(max-width: 650px) {
+      main {
+        width: 90%;
+        padding: 25px 20px;
+      }
+      ol li {
+        font-size: 1.1rem;
+      }
+      header h1 {
+        font-size: 2.3rem;
+      }
+      h2 {
+        font-size: 1.95rem;
+      }
+      nav ul li a {
+        font-size: 1rem;
+        padding: 6px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rainwater Harvesting</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="types.html">Types</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="how.html">How It Works</a></li>
+        <li><a href="installation.html" class="active">Installation Guide</a></li>
+        <li><a href="farmers.html">Importance for farmers</a></li>
+        <li><a href="india.html">Effeciency in india</a></li>
+        <li><a href="casestudy.html">Case study</a></li>
+        <li><a href="government policies.html">Government policies</a></li>
+        <li><a href="conclusion.html">Conclusion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Step-by-Step Installation Guide</h2>
+    <ol>
+      <li><strong>Assess Your Needs and Site:</strong> Calculate your water requirements and measure your rooftop catchment area. Consider local rainfall patterns and storage capacity needs.</li>
+      <li><strong>Design Your System:</strong> Plan for gutters, downspouts, filters, storage tanks, and overflow systems. Choose durable, non-toxic materials appropriate for your environment and intended water use.</li>
+      <li><strong>Prepare the Catchment Area:</strong> Clean your rooftop to remove debris and contaminants. Install or adjust gutters and downspouts to ensure effective collection and conveyance.</li>
+      <li><strong>Install Filtration:</strong> Add mesh filters and first-flush diverters to exclude debris and initial dirty runoff from entering the storage tank.</li>
+      <li><strong>Set Up Storage Tanks:</strong> Position tanks on stable stands. Connect pipes securely to guide water into tanks, allowing easy access for maintenance and water use.</li>
+      <li><strong>Install Overflow and Recharge Systems:</strong> Ensure overflow pipes divert excess water safely. Optionally add recharge pits or wells to replenish groundwater.</li>
+      <li><strong>Maintenance:</strong> Regularly clean catchment areas, gutters, filters, and tanks. Inspect and repair leaks or blockages to maintain water quality and system efficiency effectively.</li>
+    </ol>
+  </main>
+<a href="index.html" class="back-home-button">Back to Home</a>
+
+  <footer>
+    <p>© 2025 Rainwater Harvesting Project | Designed by Your Name</p>
+  </footer>
+</body>
+</html>
